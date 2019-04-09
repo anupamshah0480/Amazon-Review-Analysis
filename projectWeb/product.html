@@ -14,6 +14,9 @@ and open the template in the editor.
         <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
     </head>
     <body style="text-align: center;">
+      <div class="side-img" style="width:300px; height:500px;">
+        <img src="side-img.png" alt="">
+      </div>
       <div id="product">
         <div class="products"><p>Select a product:<br></p>
 
@@ -34,7 +37,7 @@ and open the template in the editor.
                     <option value="2016 Newest 6" Unlocked Indigi M8 White Wireless SmartPhone Android 5.1 (Dual SIM) Unlocked">2016 Newest 6" Unlocked Indigi M8 White Wireless SmartPhone Android 5.1 (Dual SIM) Unlocked</option>
                     <option value="3 Pack Replacement Belt Clip Holster for Otterbox Iphone 5 Defender Case - Black">3 Pack Replacement Belt Clip Holster for Otterbox Iphone 5 Defender Case - Black</option>
                 </select>
-                <input type="submit" id="sub1" value="Analyse">
+                <button type="button" id="sub1" onclick="showGraph()">Analyse</button>
 
         </div>
         <div class="chart-container" style="position: absolute; height:10vh; width:20vw; padding-left: 150px; padding-top: 50px;">
@@ -45,18 +48,18 @@ and open the template in the editor.
             var myChart = new Chart(ctx, {
             type: 'pie',
             data: {
-                labels: ['Red', 'Green'],
+                labels: ['Positive', 'Negative'],
                 datasets: [{
                         label: '# of Votes',
-                        data: [60,40],
+                        data: [67,33],
                         backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(75, 192, 192, 0.2)'
+                        'rgba(255,165,0, 0.8)',
+                        'rgba(0, 0, 0, 0.8)'
 
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(75, 192, 192, 1)'
+                      'rgba(255,165,0, 1)',
+                      'rgba(0, 0, 0, 1)'
                     ],
                     borderWidth: 1
                 }]
@@ -71,9 +74,11 @@ and open the template in the editor.
                 }
             }
             });
+
         </script>
-        <!--</div>-->
+
         </div>
       </div>
+
     </body>
 </html>

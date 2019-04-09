@@ -5,6 +5,8 @@
 body{
  //background-repeat: no-repeat;background-position: center;background-size: cover;height: 100%;
  font-family: 'Josefin Sans', sans-serif;
+ display: inline-flex;
+ float: left;
 }
 .products{
     font-size: 50px;
@@ -19,14 +21,23 @@ body{
   	background-color: white;
   	border-radius: 5px;
 }
+.side-img{
+  width: 300px;
+  height: 600px;
+  float: left;
+  margin-right: -300px;
+  margin-left: 60px;
+}
 
 #product{
-  width: 660px;
+  border-radius: 20px;
+  width: 650px;
   color:#ff9100;
-  height: 750px;
+  height: 720px;
   border-style: solid;
   border-color: #ff9100;
-  margin-left: 480px;
+  margin-left: 880px;
+  margin-top: 10px;
 }
 
 #sub1{
