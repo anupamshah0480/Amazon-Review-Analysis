@@ -1,0 +1,72 @@
+.main{
+    background-color: gray;
+}
+.firstDivision{
+    float: left;
+    height: 100%;
+    width: 50%;
+    //background-image: url('AmazonProducts.JPG');
+    background-color: cyan;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.secondDivision{
+    
+    width : 50%;
+    float: right;
+    height: 100%;
+    //background-image: url('AmazonReview.JPG');
+    background-color: graytext;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+h2{
+	font-family: seashore;
+	color: blue;
+	text-align: center;
+	padding-top: 20px;
+	line-height: 10px;
+}
+.title{
+    color:black;
+    font-size: 40px;
+    text-align: center;
+    //background-image: url('AmazonProducts.JPG');
+    padding-top: 60px;
+    padding-bottom: 60px;
+    //background-color: brown;
+    
+}
+#lost{
+	font-family: seashore;
+	color: black;
+	text-align: center;
+	margin-top: 2px;
+	font-size: 40px;
+        //color: red;
+    border: 3px white solid;
+    border-radius: 500px;
+    padding: 10px;	
+    margin-left: 300px;
+    font-family: georgia;
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: none;
+}
+#post{
+    color: red;
+    border: 3px white solid;
+    border-radius: 500px;
+    padding: 10px;	
+    margin-left: 250px;
+    font-family: georgia;
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: none;
+}
+body{
+        background-image:url(AmazonProducts.JPG); 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+}

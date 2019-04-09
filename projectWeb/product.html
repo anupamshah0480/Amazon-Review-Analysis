@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Evaluate a Product</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="products1.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    </head>
+    <body style="text-align: center;">
+      <div id="product">
+        <div class="products"><p>Select a product:<br></p>
+
+                <select name="products" class="each-product">
+                    <option value=""CLEAR CLEAN ESN" Sprint EPIC 4G Galaxy SPH-D700*FRONT CAMERA*ANDROID*SLIDER*QWERTY KEYBOARD*TOUCH SCREEN5">"CLEAR CLEAN ESN" Sprint EPIC 4G Galaxy SPH-D700*FRONT CAMERA*ANDROID*SLIDER*QWERTY KEYBOARD*TOUCH SCREEN5</option>
+                    <option value=""Nokia Asha 302 Unlocked GSM Phone with 3.2MP Camera, Video, QWERTY Keyboard, Wi-Fi, Bluetooth, FM Radio, SNS Integration, MP3/MP4 Player and microSD Slot - White International Version/Warranty">"Nokia Asha 302 Unlocked GSM Phone with 3.2MP Camera, Video, QWERTY Keyboard, Wi-Fi, Bluetooth, FM Radio, SNS Integration, MP3/MP4 Player and microSD Slot - White International Version/Warranty</option>
+                    <option value="((Unlocked))BlackBerry Bold 9650 Unlocked Clean ESN Smartphone non camera">((Unlocked))BlackBerry Bold 9650 Unlocked Clean ESN Smartphone non camera</option>
+                    <option value="(LANDVO) 5.0" Capacitive Touch MTK6582 Quad Core Android 4.2.2 3G Phone 512MB RAM 4GB ROM 2MP CAM WiFi GPS - Black">(LANDVO) 5.0" Capacitive Touch MTK6582 Quad Core Android 4.2.2 3G Phone 512MB RAM 4GB ROM 2MP CAM WiFi GPS - Black</option>
+                    <option value="[XMAS DEAL] [New Edition] Jethro [SC213V2] Flip Quad-band Unlocked GSM Senior & Kids Cell Phone, SOS Emergency Button, 2.4" Large LCD with Large Keypad">[XMAS DEAL] [New Edition] Jethro [SC213V2] Flip Quad-band Unlocked GSM Senior & Kids Cell Phone, SOS Emergency Button, 2.4" Large LCD with Large Keypad</option>
+                    <option value="[XMAS DEAL] Jethro [SC118] Simple Unlocked Quad-band GSM Senior & Kids Cell Phone, SOS Button, Easy to Use, Light Weight, Large Keyboard [New Firmware Edition]">[XMAS DEAL] Jethro [SC118] Simple Unlocked Quad-band GSM Senior & Kids Cell Phone, SOS Button, Easy to Use, Light Weight, Large Keyboard [New Firmware Edition]</option>
+                    <option value="10.6'' Inch E-passion Unlocked Smart Phone +Tablet='' Phablet'' Android 4.4 Kitkat Gsm,Wcdma Tablet Phone - Unlocked Dual Sim Card,Quad Core- At&t, Cricket,Straight Talk ,T-Mobile,H20,Net10 3g Phone Tablet 2G Ram 32G Rom[Free Leather Case]">10.6'' Inch E-passion Unlocked Smart Phone +Tablet='' Phablet'' Android 4.4 Kitkat Gsm,Wcdma Tablet Phone - Unlocked Dual Sim Card,Quad Core- At&t, Cricket,Straight Talk ,T-Mobile,H20,Net10 3g Phone Tablet 2G Ram 32G Rom[Free Leather Case]</option>
+                    <option value="2.45 " IPS Touch Screen the World's Smallest Android Smartphone Dual Sim Quadband">2.45 " IPS Touch Screen the World's Smallest Android Smartphone Dual Sim Quadband</option>
+                    <option value="2.45" UNLOCKED Rugged Micro Android Smart Phone; Dual-Sim, WiFi, and Bluetooth">2.45" UNLOCKED Rugged Micro Android Smart Phone; Dual-Sim, WiFi, and Bluetooth</option>
+                    <option value="2016 GSM Factory Unlocked! Smartphone 6" QHD Android 5.1 Lollipop Bluetooth WiFi">2016 GSM Factory Unlocked! Smartphone 6" QHD Android 5.1 Lollipop Bluetooth WiFi</option>
+                    <option value="2016 Latest Mini6 Small Android 5.1 Smart Mobile Cell Phone Touch Screen Can Work With Worldwide (Gold)">2016 Latest Mini6 Small Android 5.1 Smart Mobile Cell Phone Touch Screen Can Work With Worldwide (Gold)</option>
+                    <option value="2016 Latest Mini6 Small Android 5.1 Smart5 Mobile Cell Phone Touch Screen Can Work Worldwide (Black)">2016 Latest Mini6 Small Android 5.1 Smart Mobile Cell Phone Touch Screen Can Work Worldwide (Black)</option>
+                    <option value="2016 Latest Mini6 Small Android 5.1 Smart Mobile Cell Phone Touch Screen Can Work Worldwide (Rose Gold)">2016 Latest Mini6 Small Android 5.1 Smart Mobile Cell Phone Touch Screen Can Work Worldwide (Rose Gold)</option>
+                    <option value="2016 Newest 6" Unlocked Indigi M8 White Wireless SmartPhone Android 5.1 (Dual SIM) Unlocked">2016 Newest 6" Unlocked Indigi M8 White Wireless SmartPhone Android 5.1 (Dual SIM) Unlocked</option>
+                    <option value="3 Pack Replacement Belt Clip Holster for Otterbox Iphone 5 Defender Case - Black">3 Pack Replacement Belt Clip Holster for Otterbox Iphone 5 Defender Case - Black</option>
+                </select>
+                <input type="submit" id="sub1" value="Analyse">
+
+        </div>
+        <div class="chart-container" style="position: absolute; height:10vh; width:20vw; padding-left: 150px; padding-top: 50px;">
+        <canvas id="myChart" width="100" height="100"></canvas>
+        <!--<div id="graph">-->
+        <script>
+            var ctx = document.getElementById('myChart');
+            var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Red', 'Green'],
+                datasets: [{
+                        label: '# of Votes',
+                        data: [60,40],
+                        backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+            });
+        </script>
+        <!--</div>-->
+        </div>
+      </div>
+    </body>
+</html>
