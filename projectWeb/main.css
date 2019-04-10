@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Noto+Sans+SC|Oxygen');
+
+.container{
+  background:linear-gradient(rgba(255,165,0,0.8), rgba(0,0,0,0.20)),url('AmazonProducts.JPG');
+  height:99%;
+  width: 99%;
+  position: absolute;
+  background-size: contain;
+  margin-top: 1px;
+  display: inline-flex;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.logo{
+  width: 350px;
+  height: 350px;
+  float: left;
+  margin-top: 130px;
+  margin-left: 100px;
+  margin-right: 20px;
+}
+
+.nav{
+  display: flex;
+}
+
+.gp-name{
+  font-size: 50px;
+  float: left;
+  padding-left: 20px;
+  color: White;
+  margin-right: 380px;
+  font-weight: bold;
+}
+
+.listName{
+  font-size: 20px;
+  color: White;
+}
+
+ul li{
+  display: inline;
+  margin-left: 80px;
+}
+
+.contents{
+  float: right;
+  color: White;
+  margin-top: 80px;
+  padding-left: 30px;
+  margin-left: 10px;
+}
+
+.head2{
+  font-size: 60px;
+}
+
+.detail{
+  font-size: 30px;
+}
+
+.but1{
+  width: 250px;
+  background-color: White;
+  height: 40px;
+  border-style: solid;
+  border-color: White;
+  padding-left: 50px;
+  padding-top: 17px;
+  border-radius: 5px;
+  font-size: 25px;
+  color:rgb(255,140,0);
+}
+a{
+  color: rgb(255,140,0);
+}
+
+a:link{
+  text-decoration: none;
+}
