@@ -23,7 +23,7 @@ body{
 }
 .side-img{
   width: 300px;
-  height: 600px;
+  height: 550px;
   float: left;
   margin-right: -300px;
   margin-left: 60px;
@@ -33,11 +33,12 @@ body{
   border-radius: 11px;
   width: 650px;
   color:#ff9100;
-  height: 720px;
+  height: 750px;
   border-style: solid;
   border-color: #ff9100;
   margin-left: 880px;
   margin-top: 10px;
+  font-size: 15px;
 }
 
 #sub1{

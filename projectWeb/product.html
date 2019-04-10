@@ -20,30 +20,28 @@ and open the template in the editor.
       <div id="product">
         <div class="products"><p>Select a product:<br></p>
 
-                <select name="products" class="each-product">
-                    <option value=""CLEAR CLEAN ESN" Sprint EPIC 4G Galaxy SPH-D700*FRONT CAMERA*ANDROID*SLIDER*QWERTY KEYBOARD*TOUCH SCREEN5">"CLEAR CLEAN ESN" Sprint EPIC 4G Galaxy SPH-D700*FRONT CAMERA*ANDROID*SLIDER*QWERTY KEYBOARD*TOUCH SCREEN5</option>
-                    <option value=""Nokia Asha 302 Unlocked GSM Phone with 3.2MP Camera, Video, QWERTY Keyboard, Wi-Fi, Bluetooth, FM Radio, SNS Integration, MP3/MP4 Player and microSD Slot - White International Version/Warranty">"Nokia Asha 302 Unlocked GSM Phone with 3.2MP Camera, Video, QWERTY Keyboard, Wi-Fi, Bluetooth, FM Radio, SNS Integration, MP3/MP4 Player and microSD Slot - White International Version/Warranty</option>
-                    <option value="((Unlocked))BlackBerry Bold 9650 Unlocked Clean ESN Smartphone non camera">((Unlocked))BlackBerry Bold 9650 Unlocked Clean ESN Smartphone non camera</option>
-                    <option value="(LANDVO) 5.0" Capacitive Touch MTK6582 Quad Core Android 4.2.2 3G Phone 512MB RAM 4GB ROM 2MP CAM WiFi GPS - Black">(LANDVO) 5.0" Capacitive Touch MTK6582 Quad Core Android 4.2.2 3G Phone 512MB RAM 4GB ROM 2MP CAM WiFi GPS - Black</option>
-                    <option value="[XMAS DEAL] [New Edition] Jethro [SC213V2] Flip Quad-band Unlocked GSM Senior & Kids Cell Phone, SOS Emergency Button, 2.4" Large LCD with Large Keypad">[XMAS DEAL] [New Edition] Jethro [SC213V2] Flip Quad-band Unlocked GSM Senior & Kids Cell Phone, SOS Emergency Button, 2.4" Large LCD with Large Keypad</option>
-                    <option value="[XMAS DEAL] Jethro [SC118] Simple Unlocked Quad-band GSM Senior & Kids Cell Phone, SOS Button, Easy to Use, Light Weight, Large Keyboard [New Firmware Edition]">[XMAS DEAL] Jethro [SC118] Simple Unlocked Quad-band GSM Senior & Kids Cell Phone, SOS Button, Easy to Use, Light Weight, Large Keyboard [New Firmware Edition]</option>
-                    <option value="10.6'' Inch E-passion Unlocked Smart Phone +Tablet='' Phablet'' Android 4.4 Kitkat Gsm,Wcdma Tablet Phone - Unlocked Dual Sim Card,Quad Core- At&t, Cricket,Straight Talk ,T-Mobile,H20,Net10 3g Phone Tablet 2G Ram 32G Rom[Free Leather Case]">10.6'' Inch E-passion Unlocked Smart Phone +Tablet='' Phablet'' Android 4.4 Kitkat Gsm,Wcdma Tablet Phone - Unlocked Dual Sim Card,Quad Core- At&t, Cricket,Straight Talk ,T-Mobile,H20,Net10 3g Phone Tablet 2G Ram 32G Rom[Free Leather Case]</option>
-                    <option value="2.45 " IPS Touch Screen the World's Smallest Android Smartphone Dual Sim Quadband">2.45 " IPS Touch Screen the World's Smallest Android Smartphone Dual Sim Quadband</option>
-                    <option value="2.45" UNLOCKED Rugged Micro Android Smart Phone; Dual-Sim, WiFi, and Bluetooth">2.45" UNLOCKED Rugged Micro Android Smart Phone; Dual-Sim, WiFi, and Bluetooth</option>
-                    <option value="2016 GSM Factory Unlocked! Smartphone 6" QHD Android 5.1 Lollipop Bluetooth WiFi">2016 GSM Factory Unlocked! Smartphone 6" QHD Android 5.1 Lollipop Bluetooth WiFi</option>
-                    <option value="2016 Latest Mini6 Small Android 5.1 Smart Mobile Cell Phone Touch Screen Can Work With Worldwide (Gold)">2016 Latest Mini6 Small Android 5.1 Smart Mobile Cell Phone Touch Screen Can Work With Worldwide (Gold)</option>
-                    <option value="2016 Latest Mini6 Small Android 5.1 Smart5 Mobile Cell Phone Touch Screen Can Work Worldwide (Black)">2016 Latest Mini6 Small Android 5.1 Smart Mobile Cell Phone Touch Screen Can Work Worldwide (Black)</option>
-                    <option value="2016 Latest Mini6 Small Android 5.1 Smart Mobile Cell Phone Touch Screen Can Work Worldwide (Rose Gold)">2016 Latest Mini6 Small Android 5.1 Smart Mobile Cell Phone Touch Screen Can Work Worldwide (Rose Gold)</option>
-                    <option value="2016 Newest 6" Unlocked Indigi M8 White Wireless SmartPhone Android 5.1 (Dual SIM) Unlocked">2016 Newest 6" Unlocked Indigi M8 White Wireless SmartPhone Android 5.1 (Dual SIM) Unlocked</option>
-                    <option value="3 Pack Replacement Belt Clip Holster for Otterbox Iphone 5 Defender Case - Black">3 Pack Replacement Belt Clip Holster for Otterbox Iphone 5 Defender Case - Black</option>
-                </select>
-                <button type="button" id="sub1" onclick="showGraph()">Analyse</button>
+          <select name="products" class="each-product" id="products" onchange="handleProductChange()">
+              <option value="Samsung J7">Samsung J7</option>
+              <option value="nokia">Nokia Asha 302 </option>
+              <option value="BlackBerry">BlackBerry Bold 9650 </option>
+              <option value="Apple IPhone 6">Apple Iphone 6</option>
+              <option value="Apple IPhone 5">Apple Iphone 5</option>
+              <option value="Samsung Duos II">Samsung S Duos II </option>
+              <option value="Xiomi 4A">Xiomi 4A </option>
+              <option value="Samsung S5">Samsung S5</option>
+              <option value="One plus two">One plus Two</option>
+              <option value="Samsung U340">Samsung U340</option>
+          </select>
+          <button type="button" id="sub1" onclick="showGraph()">Analyse</button>
+
 
         </div>
         <div class="chart-container" style="position: absolute; height:10vh; width:20vw; padding-left: 150px; padding-top: 50px;">
         <canvas id="myChart" width="100" height="100"></canvas>
         <!--<div id="graph">-->
         <script>
+            let id;
+            document.getElementById('myChart').style.visibility = "hidden";
             var ctx = document.getElementById('myChart');
             var myChart = new Chart(ctx, {
             type: 'pie',
@@ -51,11 +49,10 @@ and open the template in the editor.
                 labels: ['Positive', 'Negative'],
                 datasets: [{
                         label: '# of Votes',
-                        data: [67,33],
+                        data: [0,0],
                         backgroundColor: [
                         'rgba(255,165,0, 0.8)',
                         'rgba(0, 0, 0, 0.8)'
-
                     ],
                     borderColor: [
                       'rgba(255,165,0, 1)',
@@ -74,7 +71,44 @@ and open the template in the editor.
                 }
             }
             });
+        function handleProductChange(){
+            let product;
+            product = document.getElementById("products").value;
 
+            if(product === 'Samsung J7'){
+                id = 1;
+            }
+            else if(product === 'nokia'){
+                id = 2;
+            }
+            else if(product === 'BlackBerry'){
+                id = 3;
+            }
+            else if(product === 'Apple IPhone 6'){
+                id = 4;
+            }
+            else if(product === 'Apple IPhone 5'){
+                id = 5;
+            }
+            else if(product === 'Samsung Duos II'){
+                id = 6;
+            }
+            else if(product === 'Xiomi 4A'){
+                id = 7;
+            }
+            else if(product === 'Samsung S5'){
+                id = 8;
+            }
+            else if(product === 'One plus two'){
+                id = 9;
+            }
+            else if(product === 'Samsung U340'){
+                id = 10;    
+            }
+        }
+        function showGraph(){
+            window.location.replace('http://0.0.0.0:5000/review-evaluation/'+id)
+        }
         </script>
 
         </div>
