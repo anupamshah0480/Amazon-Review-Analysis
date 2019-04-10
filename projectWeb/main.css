@@ -54,14 +54,16 @@ ul li{
 
 .head2{
   font-size: 60px;
+  margin-bottom: -10px;
 }
 
 .detail{
   font-size: 30px;
+  margin-top: 20px;
 }
 
 .but1{
-  width: 250px;
+  width: 300px;
   background-color: White;
   height: 40px;
   border-style: solid;
@@ -79,4 +81,9 @@ a{
 
 a:link{
   text-decoration: none;
+}
+
+span{
+  color: rgb(255,140,0);
+  font-size: 20px;
 }
